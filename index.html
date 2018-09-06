@@ -18,10 +18,10 @@
 </head>
 <body>
 <!-- Header --> 
-<div class="header-section uk-cover-container">
+<div class="header-section uk-cover-container" >
     <!-- Desktop Header-->
     <!-- background video -->
-    <div id="header_bg" class="uk-cover" uk-cover><img src="images/9to5_Site1.jpg" alt="header background image" /></div>
+    <div id="header_bg" class="uk-cover" uk-cover><img uk-parallax="blur: 10; y: -200px;" src="images/9to5_Site1.jpg" alt="header background image" /></div>
     <div class="white-overlay uk-overlay-default uk-position-cover"></div>
 
     <!-- navbar -->
@@ -34,27 +34,27 @@
 
         
     </div><!-- /navbar-->
-    <div class="header-cards uk-flex uk-margin-large-left uk-margin-large-right uk-margin-large-bottom uk-margin-large-top uk-light">
-            <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top">
-                <a href="#concept">
+    <div class="header-cards uk-flex uk-margin-large-left uk-margin-large-right uk-margin-large-bottom uk-margin-large-top uk-light" >
+            <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top" >
+                <a href="#concept" uk-scroll>
                     <img src="images/concept card.jpg" alt="concept image link" />
                     <div class="uk-text-lead uk-overlay uk-text-center"><p>Concept</p></div>
                 </a>
             </div>
             <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top">
-                <a href="#concept">
+                <a href="#caracters" uk-scroll>
                     <img src="images/characters card.jpg" alt="concept image link" />
                     <div class="uk-text-lead uk-overlay uk-text-center"><p>Characters</p></div>
                 </a>
             </div>
             <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top">
-                <a href="#concept">
+                <a href="#story" uk-scroll>
                     <img src="images/content card.jpg" alt="concept image link" />
                     <div class="uk-text-lead uk-overlay uk-text-center"><p>Story</p></div>
                 </a>
             </div>
             <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top">
-                <a href="#concept">
+                <a href="#merch" uk-scroll>
                     <img src="images/merch card.jpg" alt="concept image link" />
                     <div class="uk-text-lead uk-overlay uk-text-center uk-margin-remove-top"><p>Merch</p></div>
                 </a>
@@ -66,9 +66,24 @@
 </div> <!-- / header section -->
 
     <!-- section -->    
-    <div class="section">Section 1</div>
+    <div id="concept" class="section uk-container uk-container-expand uk-padding-large blue-gradient-down">
+        <h1 class="section-title uk-text-center uk-light uk-margin-large-bottom uk-heading-primary">The 9 to 5 Warriors concept</h1>
+        <div class="uk-flex">
+            <div class="uk-width-1-3"><img uk-parallax="x: -100, 0, 0;"src="images/9to5warriors_the_first_shift_send_Page_07.jpg" alt="comic image" /></div>
+            <div class="uk-width-2-3 uk-margin-large-left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
     <!-- section -->    
-    <div class="section">Section 2</div>
+    <div class="section uk-margin">
+        <h1 class="section-title uk-text-center uk-dark uk-margin-large-bottom uk-heading-primary">9 to 5 Characters</h1>
+        <div>
+            
+        </div>
+    </div>
     <!-- section -->    
     <div class="section">Section 3</div>
     <!-- section -->    
@@ -79,6 +94,6 @@
 
 
 
-
+    <a class="uk-position-bottom-right uk-position-fixed uk-margin uk-margin-right" href="" uk-totop uk-scroll></a>
 </body>
 </html>
