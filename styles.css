@@ -1,0 +1,29 @@
+/* 9to5warriors styles */
+
+/*********************************************
+Desktop Styles
+**********************************************/
+.uk-logo img{
+    position: relative;
+    height: 100%;
+    width: auto;
+    max-height: 150px;
+}
+.hide{
+    display: none;
+}
+.card{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .25s all ease-in-out;
+    transition: .25s all ease-in-out;
+;}
+.card:hover{
+    -webkit-transform: scale(1.1);
+    transform:scale(1.1);
+    -webkit-transition: .25s all ease-in-out;
+    transition: .25s all ease-in-out;
+}
+.white-overlay{
+    opacity: .5;
+}
