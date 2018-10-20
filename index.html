@@ -14,6 +14,8 @@
 <!-- UIkit JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit-icons.min.js"></script>
+<!-- Include JWPlayer library -->
+<script src="//content.jwplatform.com/libraries/QxqmOwOY.js"> </script>
 
 </head>
 <body>
@@ -21,7 +23,9 @@
 <div class="header-section uk-cover-container" >
     <!-- Desktop Header-->
     <!-- background video -->
-    <div id="header_bg" class="uk-cover" uk-cover><img uk-parallax="blur: 10; y: -200px;" src="images/9to5_Site1.jpg" alt="header background image" /></div>
+    <div id="header_bg" class="uk-cover" uk-cover><img uk-parallax="blur: 10; y: -200px;" src="images/9to5_Site1.jpg" alt="header background image" />
+    <div class="jwplayer" id="jw_video"></div>
+    </div>
     <div class="white-overlay uk-overlay-default uk-position-cover"></div>
 
     <!-- navbar -->
@@ -95,5 +99,22 @@
 
 
     <a class="uk-position-bottom-right uk-position-fixed uk-margin uk-margin-right" href="" uk-totop uk-scroll></a>
+
+
+
+    <!-- ================================ 
+    Javascript 
+    =================================== -->
+    <script type="text/javaScript">
+        var playerInstance = jwplayer("jw_video");
+        playerInstance.setup({
+            file: "//content.jwplatform.com/videos/Aot8VrRv-5Y6d10o2.mp4",
+            mediaid: "Aot8VrRv",
+            autostart: 'true',
+        });
+    </script>
+
+
+
 </body>
 </html>
