@@ -17,27 +17,39 @@
 <!-- Include JWPlayer library -->
 <script src="//content.jwplatform.com/libraries/QxqmOwOY.js"> </script>
 
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
 </head>
 <body>
 <!-- Header --> 
-<div class="header-section uk-cover-container" >
+<div class="header-section uk-cover-container uk-height-viewport" >
     <!-- Desktop Header-->
     <!-- background video -->
-    <div id="header_bg" class="uk-cover" uk-cover><img uk-parallax="blur: 10; y: -200px;" src="images/9to5_Site1.jpg" alt="header background image" />
-    <div class="jwplayer" id="jw_video"></div>
+    <div id="header-bg" class="uk-cover header_bg" uk-cover><img uk-parallax="blur: 10; y: -200px;" src="images/9to5_Site1.jpg" alt="header background image" />
+    <div class="jw-header-video">
+        <div id="header-video"></div>
     </div>
-    <div class="white-overlay uk-overlay-default uk-position-cover"></div>
+    </div>
+    <!-- <div class="white-overlay uk-overlay-default uk-position-cover"></div> -->
 
     <!-- navbar -->
     <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-center uk-flex ">
-            <div class="uk-nav-left"><div></div></div>
+            <div class="uk-nav-left">
+                <a uk-scroll="duration: 300" href="#concept" class="nav-link">Concept</a>
+                <a uk-scroll="duration: 300"  href="#characters" class="nav-link">Characters</a>
+            </div>
             <div class="uk-nav-center"><a href="" class="uk-navbar-item uk-logo uk-flex-center"><img src="images/9to5warriors_logo.png" /></a></div>
-            <div class="uk-nav-right"><a href="" class="uk-icon-link" uk-icon="mail"></a><div class="hide">email</div></div>
+            <div class="uk-nav-right">
+                    <a uk-scroll="duration: 300" href="#story" class="nav-link">Story</a>
+                    <a uk-scroll="duration: 300" href="#merch" class="nav-link">Merchandise</a>
+                    <a href="" class="uk-icon-link" uk-icon="mail"></a><div class="hide">email</div>
+            </div>
         </div>
 
         
     </div><!-- /navbar-->
+    <!-- Header cards as navigation 
     <div class="header-cards uk-flex uk-margin-large-left uk-margin-large-right uk-margin-large-bottom uk-margin-large-top uk-light" >
             <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top" >
                 <a href="#concept" uk-scroll>
@@ -64,36 +76,244 @@
                 </a>
             </div>
     </div>
+    / header cards -->
+
+
     <!-- Mobile Header -->
     <!-- to do: create mobile version of header -->
 
 </div> <!-- / header section -->
 
     <!-- section -->    
-    <div id="concept" class="section uk-container uk-container-expand uk-padding-large blue-gradient-down">
-        <h1 class="section-title uk-text-center uk-light uk-margin-large-bottom uk-heading-primary">The 9 to 5 Warriors concept</h1>
+    <div id="concept" class="section uk-container uk-container-expand uk-padding-large">
+        <h1 class="section-title uk-text-center uk-margin-large-bottom uk-heading-primary">The 9 to 5 Warriors concept</h1>
         <div class="uk-flex">
-            <div class="uk-width-1-3"><img uk-parallax="x: -100, 0, 0;"src="images/9to5warriors_the_first_shift_send_Page_07.jpg" alt="comic image" /></div>
+            <div class="uk-width-1-3"><img uk-parallax="x: -20, 0, 0;" src="images/9to5warriors_the_first_shift_send_Page_07.jpg" alt="comic image" /></div>
             <div class="uk-width-2-3 uk-margin-large-left">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                    Let’s first take a moment to remember the 90s – the Ninja Turtles, and the Transformers, and the Ghost Busters! This was a time when Saturday mornings were spent glued to the television with a bowl of sugary goodness and ice-cold milk. Where the prize in the cereal box actually meant something and lunchboxes mirrored your spirit animal.
+                </p>
+                <p>
+                     Sitting down to watch these adventures unfold was just the start, but the real fun began by taking the adventures offscreen and into your own hands. There were tons of ways to connect to your favorite characters through the plethora of themed products that hit the shelves and sparked your imagination. Needless to say, the 90s were a time to be remembered and 9 to 5 Warriors aims to recapture all of its magic. It does this by becoming the remake of a 90s cartoon you never got as a kid, but deserve as an adult. It gives you an excuse to play with your food and bring boring office supplies to life. 
+                </p>
+                <p>
+                     9 to 5 Warriors is the “Saturday morning cartoon” for both the new generation and the Toys R’ Us kids who never grew up.
+                </p>
+                     
             </div>
         </div>
     </div>
     <!-- section -->    
-    <div class="section uk-margin">
+    <div id="story" class="section uk-container uk-container-expand uk-padding-large">
         <h1 class="section-title uk-text-center uk-dark uk-margin-large-bottom uk-heading-primary">9 to 5 Characters</h1>
-        <div>
-            
+        <!-- Alan -->
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Alan</h3>
+                            <p>Alan lives in the real world. He punches a timecard from 9 to 5 and makes sales calls until he’s the last one in the office. He’s a daydreamer who uses his creativity to command imaginary battles to avoid the mundane reality that lies outside his cubicle. He’s created a troop of soldiers he calls Water Cooler Commandos lead by the fearless Major Eraser, an embodiment of his alter ego. They wage war against the rotten Breakroom Bandits - which was all fine and well until the event that brought them to life, putting Alan in the middle of the very war he created.</p>
+                        </div>
+                    </div>
+                <div class="uk-card-media-right uk-cover-container">
+                    <img src="images/alan.jpg" alt="" uk-cover>
+                    <canvas width="400" height="300"></canvas>
+                </div>
+                
+        </div>
+        <!-- Major Eraser -->
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Major Eraser</h3>
+                            <p>As leader of the Water Cooler Commandos Major Eraser must remain unfazed when the sheets hit the fan and the battle goes into overtime. He’s a natural leader who never wavers from doing what’s right. And that’s the challenge. An eraser can rub itself out of existence trying to fix every mistake it comes across. He and the Water Cooler Commandos take the fight into after hours and will stop at nothing to prevent Custard’s campaign for total office domination.</p>
+                        </div>
+                    </div>
+                <div class="uk-card-media-right uk-cover-container">
+                    <img src="images/major eraser.jpg" alt="" uk-cover>
+                    <canvas width="400" height="300"></canvas>
+                </div>
+                
+        </div> <!-- Colonel Custard-->
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Colonel Custard</h3>
+                            <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                        </div>
+                    </div>
+                <div class="uk-card-media-right uk-cover-container">
+                    <img src="images/colonel custard.jpg" alt="" uk-cover>
+                    <canvas width="400" height="300"></canvas>
+                </div>
+                
+        </div>
+
+
+    </div>
+    <!-- section -->    
+    <div id="story" class="section uk-container uk-container-expand uk-padding-large">
+        <h1 class="section-title uk-text-center uk-dark uk-margin-large-bottom uk-heading-primary">9 to 5 Characters</h1>
+        <!-- conainer for all comic items -->
+        <div uk-grid uk-height-match="target: .match; row:false" class="">
+            <div class="uk-width-2-3@s">
+                <div class="match uk-cover-container uk-card uk-card-body card-border " >
+                    <img class="uk-cover z-negative" src="images/9to5_Site5.jpg" />
+                    <div class="white-overlay  uk-position-cover z-negative" ></div>
+                    <p>
+                    Sometimes extraordinary things happen to extra-ordinary people. Ask Alan McMillan. His life used to be pretty routine – punch into work, make a few sales calls, daydream about the cute receptionist, you know? Normal. Sure, his habit of making action figures out of leftover lunches and office supplies might be a little off-putting to some, but no one really hung out in his cubicle long enough to notice.</p>
+
+                    <p> Alan preferred it this way and kept his favorite figures hidden in a desk drawer waging an imaginary war between food and office supply soldiers. That is, until a freak accident involving his favorite Japanese energy drink and a surge protector sparked them to life. Now, Alan is caught between a very real battle for total office domination - one that threatens to drag him out of the comfortable confines of his vivid imagination and into a reality where paper balls, rubber bands and thumb tacks are threatening his way of life.
+                    </p>
+                </div>
+            </div>
+            <div class="uk-width-1-3@s">
+                <div  class="match uk-cover-container uk-card uk-card-body card-border" >
+                    <img class="uk-cover" src="images/9to5_Site5.jpg" />
+                    
+                </div>
+            </div>
+            <div class="uk-width-1-1@s">
+                <div class="match uk-cover-container uk-card uk-card-body card-border " >
+                    <img class="uk-cover" src="images/story-wide.jpg" />
+                </div>        
+        
+            </div>
+
+            <div class="uk-width-1-3@s">
+                <div class="match uk-cover-container uk-card uk-card-body card-border " >
+                    <img class="uk-cover" src="images/story-square-2.jpg" />
+                </div>        
+            </div>
+
+            <div class="uk-width-2-3@s">
+                <div class="match uk-cover-container uk-card uk-card-body card-border" >
+                    <img class="uk-cover" src="images/story-wide-3.jpg" />
+                </div>        
+    
+            </div>
         </div>
     </div>
     <!-- section -->    
-    <div class="section">Section 3</div>
+    <div id="concept" class="section uk-container uk-container-expand uk-padding-large ">
+            <h1 class="section-title uk-text-center uk-margin-large-bottom uk-heading-primary">The 9 to 5 Warriors concept</h1>
+            <div class="uk-flex">
+                <div class="uk-width-2-3 uk-margin-large-right">
+                    <p>
+                        Unfortunately, in today’s world the TV, once the focal center of a home, now just adorns the walls. Our eyes are now exposed to an onslaught of smaller, smarter screens. Most of the shows we watch are “on demand” and the setting in which we watch them is no longer our living rooms. With so many destinations and viewpoints, the playground for content has changed, however, the concept of content hasn’t. We’re still forcing 23-minute episodes into web format, interrupting stories with unrelated ads, and following rigid 3 act structures. Media consumption has changed, and content needs to evolve to change with it. 
+                    </p>
+                    <p>
+                        9 to 5 Warriors wants to meet the viewer where they are by creating content made for the medium, not by being conformed into it. 9 to 5 Warriors aims to deliver an exciting vertical format that breaks the traditional 23-minute episode down to story arcs perfectly suited for consumption in between day to day activities. Catch the Water Cooler Commandos around the actual water cooler or see what the Break Room Bandits are up to on your lunch break. Stories should be short, engaging and available when and where the viewer wants. Viewers should be able to follow the characters they connect with most and choose their own adventures. But most importantly, viewers should be able to take the adventure into their own hands.
+                    </p>
+                    <p>
+                        This doesn’t mean that long format episodes are dead. But 9 to 5 Warriors, as a series, will utilize these stories to keep the adventures going in between each season.
+                    </p> 
+                </div>
+                <div class="uk-width-1-3"><img uk-parallax="x: +20, 0, 0;"src="images/9to5warriors_the_first_shift_send_Page_07.jpg" alt="comic image" /></div>
+
+            </div>
+        </div>
+    
     <!-- section -->    
-    <div class="section">Section 4</div>
+    <div id="merch" class="section uk-container uk-container-expand uk-padding-large ">
+        <h1 class="section-title uk-text-center uk-margin-large-bottom uk-heading-primary">Merchandise</h1>
+        <div class="uk-flex" uk-flex>
+            <div class="uk-column-1-2 uk-margin">
+                <p>
+                    Products have gone from tangible to downloadable, but real connections come from real life interactions. Experiences for kids now depend on countless hours of binge-watching sessions with no real break to appreciate the most creative time in their lives. 
+                </p>
+                <p>
+                    Too many imaginations are held hostage as kids holding on to iPads. Trading collectible cards or liberating a new action figure from their cellophane and cardboard packages is what built the unbreakable bonds we felt with our Stretch Armstrongs and G.I. Joes. That’s what creates a nostalgic generation. 
+                    
+                </p>
+                <p>
+                    Television programs from the 90s were made for merchandising. The shows themselves were essentially long commercials aimed at selling products, earning the global toy market upwards of 88.8 billion worldwide and 25.5 billion in the US alone. 
+                </p>
+                <p>
+                    9 to 5 Warriors wants to take part in that share by reintroducing the excitement of building on a story by building with your hands. We plan to market the type of creativity and imagination that makes toys great again. Both of these ideals are benchmarks of a fulfilling childhood, and 9 to 5 Warriors will be the segue that appeals to children and adults old enough to remember that feeling.  
+                    
+                </p>
+            </div>
+        </div>
+            <div class="uk-child-width-1-4@s" uk-grid uk-lightbox="animation: slide">
+            <div >
+                <a class="uk-inline" href="images/merch-_0000_IMG_8259.jpg" data-caption="">
+                    <img src="images/merch-_0000_IMG_8259.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0001_IMG_8245.jpg" data-caption="Caption 2">
+                    <img src="images/merch-_0001_IMG_8245.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a class="uk-inline" href="images/merch-_0002_IMG_8129.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0002_IMG_8129.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0003_IMG_8123.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0003_IMG_8123.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0004_IMG_8111.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0004_IMG_8111.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0005_IMG_8098.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0005_IMG_8098.jpg" alt="">
+                </a>
+            </div>
+            <div class="uk-width-1-2 uk-cover-container " style="flex-grow: 2">
+                    <h2 class="uk-heading-divider uppercase">The nostalgic generation</h2>
+                    <p class="uk-text-lead">Trading collectible cards or liberating a new action figure from their cellophane and cardboard packages is what built the unbreakable bonds we felt with our Stretch Armstrongs and G.I. Joes.</p>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0006_IMG_5436.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0006_IMG_5436.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0007_IMG_5423.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0007_IMG_5423.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0008_IMG_5416.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0008_IMG_5416.jpg" alt="">
+                </a>
+            </div>
+            
+            <div >
+                <a class="uk-inline" href="images/merch-_0009_IMG_5347.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0009_IMG_5347.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0010_IMG_5323.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0010_IMG_5323.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0011_IMG_5304.jpg" data-caption="Caption 3">
+                    <img src="images/merch-_0011_IMG_5304.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                    <a class="uk-inline" href="images/merch-_0000_IMG_8260.jpg" data-caption="Caption 3">
+                        <img src="images/merch-_0000_IMG_8260.jpg" alt="">
+                    </a>
+                </div>
+                <div >
+                    <a class="uk-inline" href="images/merch-_0000_IMG_8261.jpg" data-caption="Caption 3">
+                        <img src="images/merch-_0000_IMG_8261.jpg" alt="">
+                    </a>
+                </div>
+            </div>
 
 
+    </div>
 
 
 
@@ -106,12 +326,28 @@
     Javascript 
     =================================== -->
     <script type="text/javaScript">
-        var playerInstance = jwplayer("jw_video");
-        playerInstance.setup({
-            file: "//content.jwplatform.com/videos/Aot8VrRv-5Y6d10o2.mp4",
-            mediaid: "Aot8VrRv",
-            autostart: 'true',
+        jwplayer("header-video").setup({
+            "file": "http://content.jwplatform.com/videos/Aot8VrRv-5Y6d10o2.mp4",
+            "image": "http://content.jwplatform.com/thumbs/Aot8VrRv-720.jpg",
+            "autostart": false,
+            "stretching": "fill",
+            "controls": false,
+            'mute': true,
         });
+
+        var promise = document.querySelector('header-video').play();
+
+        if (promise !== undefined) {
+        promise.then(_ => {
+            // Autoplay started!
+            jwplayer("header-video").play();
+
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so that user can start playback.
+        });
+        }
+
     </script>
 
 
