@@ -19,183 +19,334 @@
 
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 </head>
 <body>
 <!-- Header --> 
-<div class="header-section uk-cover-container uk-height-viewport" >
-    <!-- Desktop Header-->
-    <!-- background video -->
-    <div id="header-bg" class="uk-cover header_bg" uk-cover><img uk-parallax="blur: 10; y: -200px;" src="images/9to5_Site1.jpg" alt="header background image" />
-    <div class="jw-header-video">
-        <div id="header-video"></div>
+<div class="header-section uk-cover-container" uk-height-viewport="offset-bottom: 50px" >
+    <!-- video controls -->
+    <div class="video-controls uk-position-bottom-left">
+        <i id="play" class="fas fa-pause video-button" onclick="playToggle()" ></i>
+        <i id="mute" class="fas fa-volume-mute video-button" onclick="muteToggle()" ></i>
     </div>
-    </div>
-    <!-- <div class="white-overlay uk-overlay-default uk-position-cover"></div> -->
 
-    <!-- navbar -->
-    <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-        <div class="uk-navbar-center uk-flex ">
-            <div class="uk-nav-left">
-                <a uk-scroll="duration: 300" href="#concept" class="nav-link">Concept</a>
-                <a uk-scroll="duration: 300"  href="#characters" class="nav-link">Characters</a>
-            </div>
-            <div class="uk-nav-center"><a href="" class="uk-navbar-item uk-logo uk-flex-center"><img src="images/9to5warriors_logo.png" /></a></div>
-            <div class="uk-nav-right">
-                    <a uk-scroll="duration: 300" href="#story" class="nav-link">Story</a>
-                    <a uk-scroll="duration: 300" href="#merch" class="nav-link">Merchandise</a>
-                    <a href="" class="uk-icon-link" uk-icon="mail"></a><div class="hide">email</div>
-            </div>
+
+
+    <!-- Desktop Header-->
+        <!-- background video -->
+        <div class="jw-header-video">
+            <div id="header-video"></div>
         </div>
+        <!-- <div class="white-overlay uk-overlay-default uk-position-cover"></div> -->
+
+        <!-- navbar -->
+        <div class="navbar uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <div class="uk-navbar-left  margin-auto">
+                <div class="uk-navbar-item"><a href="" class="uk-navbar-item uk-logo uk-flex-center"><img src="images/9to5warriors_logo.png" /></a></div>
+                <div class="uk-navbar-nav ">
+                    <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#concept" class="nav-link">Concpet</a></div>
+                    <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#characters" class="nav-link">Characters</a></div>
+                    <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#story" class="nav-link">Story</a></div>
+                    <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#content" class="nav-link">Content</a></div>
+                    <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#merch" class="nav-link">Merchandise</a></div>
+                    <div class="uk-navbar-item"><a href="" class="uk-icon-link email-link" uk-icon="icon:mail; ratio:2;" ></a></div>
+                </div>
+            </div><!-- /navbar-left -->
+        </div><!-- /navbar-->
 
         
-    </div><!-- /navbar-->
-    <!-- Header cards as navigation 
-    <div class="header-cards uk-flex uk-margin-large-left uk-margin-large-right uk-margin-large-bottom uk-margin-large-top uk-light" >
-            <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top" >
-                <a href="#concept" uk-scroll>
-                    <img src="images/concept card.jpg" alt="concept image link" />
-                    <div class="uk-text-lead uk-overlay uk-text-center"><p>Concept</p></div>
-                </a>
-            </div>
-            <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top">
-                <a href="#caracters" uk-scroll>
-                    <img src="images/characters card.jpg" alt="concept image link" />
-                    <div class="uk-text-lead uk-overlay uk-text-center"><p>Characters</p></div>
-                </a>
-            </div>
-            <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top">
-                <a href="#story" uk-scroll>
-                    <img src="images/content card.jpg" alt="concept image link" />
-                    <div class="uk-text-lead uk-overlay uk-text-center"><p>Story</p></div>
-                </a>
-            </div>
-            <div class="card uk-inline uk-width-1-4 uk-margin-left uk-margin-right uk-margin-bottom uk-margin-top">
-                <a href="#merch" uk-scroll>
-                    <img src="images/merch card.jpg" alt="concept image link" />
-                    <div class="uk-text-lead uk-overlay uk-text-center uk-margin-remove-top"><p>Merch</p></div>
-                </a>
-            </div>
-    </div>
-    / header cards -->
-
-
-    <!-- Mobile Header -->
-    <!-- to do: create mobile version of header -->
-
+    <!-- Down link section -->
+    
 </div> <!-- / header section -->
+<div class="down-bar">
+    <div class="margin-auto"><a uk-scroll="duration: 300" href="#concept" class="uk-icon-link" uk-icon="icon: chevron-down; ratio: 2.5;"></a></div>
+</div>
 
     <!-- section -->    
-    <div id="concept" class="section uk-container uk-container-expand uk-padding-large">
+    <div id="concept" class="section uk-container uk-container-expand">
         <h1 class="section-title uk-text-center uk-margin-large-bottom uk-heading-primary">The 9 to 5 Warriors concept</h1>
-        <div class="uk-flex">
-            <div class="uk-width-1-3"><img uk-parallax="x: -20, 0, 0;" src="images/9to5warriors_the_first_shift_send_Page_07.jpg" alt="comic image" /></div>
-            <div class="uk-width-2-3 uk-margin-large-left">
+        <div class="uk-flex uk-flex-wrap">
+            <div uk-slider="autoplay: true" class="uk-width-1-3@s">
+
+                <div class="uk-position-relative uk-visible-toggle uk-light">
+            
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-1@s uk-child-width-1-1@m">
+                        <li>
+                            <img src="images/9to5warriors_the_first_shift_send_Page_07.jpg" alt="">
+                            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                        </li>
+                        <li>
+                            <img src="images/9to5warriors_the_first_shift_send_Page_07.jpg" alt="">
+                            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                        </li>
+                    </ul>
+            
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            
+                </div>
+            
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            
+            </div>
+                
+            <div class="uk-width-2-3@s uk-padding">
                 <p>
                     Let’s first take a moment to remember the 90s – the Ninja Turtles, and the Transformers, and the Ghost Busters! This was a time when Saturday mornings were spent glued to the television with a bowl of sugary goodness and ice-cold milk. Where the prize in the cereal box actually meant something and lunchboxes mirrored your spirit animal.
                 </p>
                 <p>
-                     Sitting down to watch these adventures unfold was just the start, but the real fun began by taking the adventures offscreen and into your own hands. There were tons of ways to connect to your favorite characters through the plethora of themed products that hit the shelves and sparked your imagination. Needless to say, the 90s were a time to be remembered and 9 to 5 Warriors aims to recapture all of its magic. It does this by becoming the remake of a 90s cartoon you never got as a kid, but deserve as an adult. It gives you an excuse to play with your food and bring boring office supplies to life. 
+                        Sitting down to watch these adventures unfold was just the start, but the real fun began by taking the adventures offscreen and into your own hands. There were tons of ways to connect to your favorite characters through the plethora of themed products that hit the shelves and sparked your imagination. Needless to say, the 90s were a time to be remembered and 9 to 5 Warriors aims to recapture all of its magic. It does this by becoming the remake of a 90s cartoon you never got as a kid, but deserve as an adult. It gives you an excuse to play with your food and bring boring office supplies to life. 
                 </p>
                 <p>
-                     9 to 5 Warriors is the “Saturday morning cartoon” for both the new generation and the Toys R’ Us kids who never grew up.
+                        9 to 5 Warriors is the “Saturday morning cartoon” for both the new generation and the Toys R’ Us kids who never grew up.
                 </p>
-                     
+                        
             </div>
         </div>
+
     </div>
     <!-- section -->    
-    <div id="story" class="section uk-container uk-container-expand uk-padding-large">
-        <h1 class="section-title uk-text-center uk-dark uk-margin-large-bottom uk-heading-primary">9 to 5 Characters</h1>
-        <!-- Alan -->
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                <div>
+    <div id="characters" class="section uk-container uk-container-expand">
+        <h1 class="section-title uk-text-center uk-dark uk-margin-large-bottom uk-heading-primary">Characters</h1>
+        <div class="desktop-characters">
+        <!-- Tabs -->
+        <ul class="uk-flex-center character-tabs" uk-tab uk-sticky="bottom: #characters">
+            <li class="uk-active"><a href="#">MAIN</a></li>
+            <li><a href="#">WATER COOLER COMMANDOS</a></li>
+            <li><a href="#">BREAK ROOM BANDITS</a></li>
+        </ul>
+        <ul class="uk-switcher">
+            <!-- main characters tab -->
+            <li class="tab uk-animation-fade">
+                <!-- Alan -->
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Alan</h3>
+                                    <p>Alan lives in the real world. He punches a timecard from 9 to 5 and makes sales calls until he’s the last one in the office. He’s a daydreamer who uses his creativity to command imaginary battles to avoid the mundane reality that lies outside his cubicle. He’s created a troop of soldiers he calls Water Cooler Commandos lead by the fearless Major Eraser, an embodiment of his alter ego. They wage war against the rotten Breakroom Bandits - which was all fine and well until the event that brought them to life, putting Alan in the middle of the very war he created.</p>
+                                </div>
+                            </div>
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="images/alan.jpg" alt="" uk-cover>
+                            <canvas width="400" height="300"></canvas>
+                        </div>
+                        
+                </div>
+                <!-- Major Eraser -->
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Major Eraser</h3>
+                                    <p>As leader of the Water Cooler Commandos Major Eraser must remain unfazed when the sheets hit the fan and the battle goes into overtime. He’s a natural leader who never wavers from doing what’s right. And that’s the challenge. An eraser can rub itself out of existence trying to fix every mistake it comes across. He and the Water Cooler Commandos take the fight into after hours and will stop at nothing to prevent Custard’s campaign for total office domination.</p>
+                                </div>
+                            </div>
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="images/major eraser.jpg" alt="" uk-cover>
+                            <canvas width="400" height="300"></canvas>
+                        </div>
+                        
+                </div> <!-- Colonel Custard-->
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Colonel Custard</h3>
+                                    <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                                </div>
+                            </div>
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="images/colonel custard.jpg" alt="" uk-cover>
+                            <canvas width="400" height="300"></canvas>
+                        </div>
+                        
+                </div>
+            </li><!-- end of main characters tab -->
+            <!-- water cooler commandos tab -->
+            <li class="tab uk-animation-fade">
+                <!-- Alan -->
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Alan</h3>
+                                    <p>Alan lives in the real world. He punches a timecard from 9 to 5 and makes sales calls until he’s the last one in the office. He’s a daydreamer who uses his creativity to command imaginary battles to avoid the mundane reality that lies outside his cubicle. He’s created a troop of soldiers he calls Water Cooler Commandos lead by the fearless Major Eraser, an embodiment of his alter ego. They wage war against the rotten Breakroom Bandits - which was all fine and well until the event that brought them to life, putting Alan in the middle of the very war he created.</p>
+                                </div>
+                            </div>
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="images/alan.jpg" alt="" uk-cover>
+                            <canvas width="400" height="300"></canvas>
+                        </div>
+                        
+                </div>
+                <!-- Colonel Custard-->
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Colonel Custard</h3>
+                                    <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                                </div>
+                            </div>
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="images/colonel custard.jpg" alt="" uk-cover>
+                            <canvas width="400" height="300"></canvas>
+                        </div>
+                        
+                </div>
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Colonel Custard</h3>
+                                    <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                                </div>
+                            </div>
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="images/colonel custard.jpg" alt="" uk-cover>
+                            <canvas width="400" height="300"></canvas>
+                        </div>
+                        
+                </div>
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Colonel Custard</h3>
+                                    <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                                </div>
+                            </div>
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="images/colonel custard.jpg" alt="" uk-cover>
+                            <canvas width="400" height="300"></canvas>
+                        </div>
+                        
+                </div>
+                
+            </li>
+            <li class="tab uk-animation-fade">
+                    <!-- Alan -->
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                            <div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Alan</h3>
+                                        <p>Alan lives in the real world. He punches a timecard from 9 to 5 and makes sales calls until he’s the last one in the office. He’s a daydreamer who uses his creativity to command imaginary battles to avoid the mundane reality that lies outside his cubicle. He’s created a troop of soldiers he calls Water Cooler Commandos lead by the fearless Major Eraser, an embodiment of his alter ego. They wage war against the rotten Breakroom Bandits - which was all fine and well until the event that brought them to life, putting Alan in the middle of the very war he created.</p>
+                                    </div>
+                                </div>
+                            <div class="uk-card-media-right uk-cover-container">
+                                <img src="images/alan.jpg" alt="" uk-cover>
+                                <canvas width="400" height="300"></canvas>
+                            </div>
+                            
+                    </div>
+                    <!-- Colonel Custard-->
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                            <div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Colonel Custard</h3>
+                                        <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                                    </div>
+                                </div>
+                            <div class="uk-card-media-right uk-cover-container">
+                                <img src="images/colonel custard.jpg" alt="" uk-cover>
+                                <canvas width="400" height="300"></canvas>
+                            </div>
+                            
+                    </div>
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                            <div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Colonel Custard</h3>
+                                        <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                                    </div>
+                                </div>
+                            <div class="uk-card-media-right uk-cover-container">
+                                <img src="images/colonel custard.jpg" alt="" uk-cover>
+                                <canvas width="400" height="300"></canvas>
+                            </div>
+                            
+                    </div>
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                            <div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Colonel Custard</h3>
+                                        <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
+                                    </div>
+                                </div>
+                            <div class="uk-card-media-right uk-cover-container">
+                                <img src="images/colonel custard.jpg" alt="" uk-cover>
+                                <canvas width="400" height="300"></canvas>
+                            </div>
+                            
+                    </div>
+                    
+                </li>
+        </ul>
+
+    </div>
+    <!-- end of desktop characters section -->
+    <!-- mobile characters slider -->
+    <div class="mobile-characters">
+        <div class="uk-flex uk-flex-row uk-text-middle uk-margin-bottom"><i uk-icon="icon: arrow-left;"></i><span class="uk-width-expand uk-text-middle uk-text-center">swipe</span><i uk-icon="icon: arrow-right;"></i></div>
+        
+        <div uk-slider>
+            <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@">
+                <!-- add cards here as line items -->
+                <li>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/alan.jpg" alt="">
+                            <div class="uk-card-badge uk-label">W.C.C.</div>
+                        </div>
                         <div class="uk-card-body">
                             <h3 class="uk-card-title">Alan</h3>
                             <p>Alan lives in the real world. He punches a timecard from 9 to 5 and makes sales calls until he’s the last one in the office. He’s a daydreamer who uses his creativity to command imaginary battles to avoid the mundane reality that lies outside his cubicle. He’s created a troop of soldiers he calls Water Cooler Commandos lead by the fearless Major Eraser, an embodiment of his alter ego. They wage war against the rotten Breakroom Bandits - which was all fine and well until the event that brought them to life, putting Alan in the middle of the very war he created.</p>
                         </div>
                     </div>
-                <div class="uk-card-media-right uk-cover-container">
-                    <img src="images/alan.jpg" alt="" uk-cover>
-                    <canvas width="400" height="300"></canvas>
-                </div>
-                
-        </div>
-        <!-- Major Eraser -->
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Major Eraser</h3>
-                            <p>As leader of the Water Cooler Commandos Major Eraser must remain unfazed when the sheets hit the fan and the battle goes into overtime. He’s a natural leader who never wavers from doing what’s right. And that’s the challenge. An eraser can rub itself out of existence trying to fix every mistake it comes across. He and the Water Cooler Commandos take the fight into after hours and will stop at nothing to prevent Custard’s campaign for total office domination.</p>
+                </li>
+                <li>
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top">
+                                <img src="images/major eraser.jpg" alt="">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title">Major Eraser</h3>
+                                <p class="uk-text-meta uk-text-muted">Team: Water Cooler Commandos</p>
+                                <p>As leader of the Water Cooler Commandos Major Eraser must remain unfazed when the sheets hit the fan and the battle goes into overtime. He’s a natural leader who never wavers from doing what’s right. And that’s the challenge. An eraser can rub itself out of existence trying to fix every mistake it comes across. He and the Water Cooler Commandos take the fight into after hours and will stop at nothing to prevent Custard’s campaign for total office domination.</p>
+                            </div>
                         </div>
-                    </div>
-                <div class="uk-card-media-right uk-cover-container">
-                    <img src="images/major eraser.jpg" alt="" uk-cover>
-                    <canvas width="400" height="300"></canvas>
-                </div>
-                
-        </div> <!-- Colonel Custard-->
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Colonel Custard</h3>
-                            <p>Just because Colonel Custard is the leader of the Break Room Bandits doesn’t mean he’d give one sprinkle to save the lives of his subordinates. His heart is colder than the Frappe originally ordered with him. After all, being tossed away after just one bite will do that to a donut. Custard was the first to realize the power of Jensei, the Japanese energy drink that created them all and the life source to keep his jelly core contained. Now he is out for vengeance on every wasteful employee of McMillan Agency. He will stop at nothing to raise an army of the half-eaten to take over the whole wide office. </p>
-                        </div>
-                    </div>
-                <div class="uk-card-media-right uk-cover-container">
-                    <img src="images/colonel custard.jpg" alt="" uk-cover>
-                    <canvas width="400" height="300"></canvas>
-                </div>
-                
-        </div>
-
-
-    </div>
-    <!-- section -->    
-    <div id="story" class="section uk-container uk-container-expand uk-padding-large">
-        <h1 class="section-title uk-text-center uk-dark uk-margin-large-bottom uk-heading-primary">9 to 5 Characters</h1>
-        <!-- conainer for all comic items -->
-        <div uk-grid uk-height-match="target: .match; row:false" class="">
-            <div class="uk-width-2-3@s">
-                <div class="match uk-cover-container uk-card uk-card-body card-border " >
-                    <img class="uk-cover z-negative" src="images/9to5_Site5.jpg" />
-                    <div class="white-overlay  uk-position-cover z-negative" ></div>
-                    <p>
-                    Sometimes extraordinary things happen to extra-ordinary people. Ask Alan McMillan. His life used to be pretty routine – punch into work, make a few sales calls, daydream about the cute receptionist, you know? Normal. Sure, his habit of making action figures out of leftover lunches and office supplies might be a little off-putting to some, but no one really hung out in his cubicle long enough to notice.</p>
-
-                    <p> Alan preferred it this way and kept his favorite figures hidden in a desk drawer waging an imaginary war between food and office supply soldiers. That is, until a freak accident involving his favorite Japanese energy drink and a surge protector sparked them to life. Now, Alan is caught between a very real battle for total office domination - one that threatens to drag him out of the comfortable confines of his vivid imagination and into a reality where paper balls, rubber bands and thumb tacks are threatening his way of life.
-                    </p>
-                </div>
-            </div>
-            <div class="uk-width-1-3@s">
-                <div  class="match uk-cover-container uk-card uk-card-body card-border" >
-                    <img class="uk-cover" src="images/9to5_Site5.jpg" />
-                    
-                </div>
-            </div>
-            <div class="uk-width-1-1@s">
-                <div class="match uk-cover-container uk-card uk-card-body card-border " >
-                    <img class="uk-cover" src="images/story-wide.jpg" />
-                </div>        
-        
-            </div>
-
-            <div class="uk-width-1-3@s">
-                <div class="match uk-cover-container uk-card uk-card-body card-border " >
-                    <img class="uk-cover" src="images/story-square-2.jpg" />
-                </div>        
-            </div>
-
-            <div class="uk-width-2-3@s">
-                <div class="match uk-cover-container uk-card uk-card-body card-border" >
-                    <img class="uk-cover" src="images/story-wide-3.jpg" />
-                </div>        
+                    </li>
     
-            </div>
+            </ul>
         </div>
     </div>
-    <!-- section -->    
-    <div id="concept" class="section uk-container uk-container-expand uk-padding-large ">
-            <h1 class="section-title uk-text-center uk-margin-large-bottom uk-heading-primary">The 9 to 5 Warriors concept</h1>
+    <!-- end of mobile characters slider -->
+    <p class="clear"></p>
+
+    </div>
+
+    <!-- ================================ 
+    STORY
+    ===================================== -->    
+    <div id="story" class="section uk-container uk-container-expand uk-padding-large">
+        <h1 class="section-title uk-text-center uk-dark uk-margin-large-bottom uk-heading-primary">Story</h1>
+        <!-- conainer for all comic items -->
+        <div class="uk-flex">
+            <!-- VIDEO -->
+            <div class="uk-width-1-2@s">
+                    <script src="https://content.jwplatform.com/players/iO81Ye0b-QxqmOwOY.js"></script>
+            </div>
+            <!-- DESCRIPTION -->
+            <div class="uk-width-1-2@s uk-text-lead uk-padding">
+                Sitting down to watch these adventures unfold was just the start, but the real fun began by taking adventures offscreen and into your own hands. There were tons of ways to connect to your favorite characters through the plethora of themed products that hit the shelves and sparked your imagination.
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================
+        CONTENT 
+    ==========================================-->    
+    <div id="content" class="section uk-container uk-container-expand uk-padding-large ">
+            <h1 class="section-title uk-text-center uk-margin-large-bottom uk-heading-primary">Content</h1>
             <div class="uk-flex">
                 <div class="uk-width-2-3 uk-margin-large-right">
                     <p>
@@ -213,7 +364,7 @@
             </div>
         </div>
     
-    <!-- section -->    
+    <!--section -->    
     <div id="merch" class="section uk-container uk-container-expand uk-padding-large ">
         <h1 class="section-title uk-text-center uk-margin-large-bottom uk-heading-primary">Merchandise</h1>
         <div class="uk-flex" uk-flex>
@@ -236,80 +387,61 @@
         </div>
             <div class="uk-child-width-1-4@s" uk-grid uk-lightbox="animation: slide">
             <div >
-                <a class="uk-inline" href="images/merch-_0000_IMG_8259.jpg" data-caption="">
-                    <img src="images/merch-_0000_IMG_8259.jpg" alt="">
-                </a>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0001_IMG_8245.jpg" data-caption="Caption 2">
-                    <img src="images/merch-_0001_IMG_8245.jpg" alt="">
-                </a>
-            </div>
-            <div>
-                <a class="uk-inline" href="images/merch-_0002_IMG_8129.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0002_IMG_8129.jpg" alt="">
-                </a>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0003_IMG_8123.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0003_IMG_8123.jpg" alt="">
-                </a>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0004_IMG_8111.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0004_IMG_8111.jpg" alt="">
-                </a>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0005_IMG_8098.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0005_IMG_8098.jpg" alt="">
-                </a>
-            </div>
-            <div class="uk-width-1-2 uk-cover-container " style="flex-grow: 2">
-                    <h2 class="uk-heading-divider uppercase">The nostalgic generation</h2>
-                    <p class="uk-text-lead">Trading collectible cards or liberating a new action figure from their cellophane and cardboard packages is what built the unbreakable bonds we felt with our Stretch Armstrongs and G.I. Joes.</p>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0006_IMG_5436.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0006_IMG_5436.jpg" alt="">
-                </a>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0007_IMG_5423.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0007_IMG_5423.jpg" alt="">
-                </a>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0008_IMG_5416.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0008_IMG_5416.jpg" alt="">
-                </a>
-            </div>
-            
-            <div >
-                <a class="uk-inline" href="images/merch-_0009_IMG_5347.jpg" data-caption="Caption 3">
-                    <img src="images/merch-_0009_IMG_5347.jpg" alt="">
-                </a>
-            </div>
-            <div >
-                <a class="uk-inline" href="images/merch-_0010_IMG_5323.jpg" data-caption="Caption 3">
+                <a class="uk-inline" href="images/merch-_0010_IMG_5323.jpg" data-caption="Snack attack packs">
                     <img src="images/merch-_0010_IMG_5323.jpg" alt="">
                 </a>
             </div>
             <div >
-                <a class="uk-inline" href="images/merch-_0011_IMG_5304.jpg" data-caption="Caption 3">
+                <a class="uk-inline" href="images/merch_squares-cereal.jpg" data-caption="9 to 5 Cereal">
+                    <img src="images/merch_squares-cereal.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch_squares-cereal-side.jpg" data-caption="9 to 5 Cereal">
+                    <img src="images/merch_squares-cereal-side.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a class="uk-inline" href="images/merch_squares-cutout.jpg" data-caption="Cutout kit - Glider">
+                    <img src="images/merch_squares-cutout.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch_squares-tank.jpg" data-caption="Cutout kit - Tank">
+                    <img src="images/merch_squares-tank.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0000_IMG_8260.jpg" data-caption="Cutout kit - Tank">
+                    <img src="images/merch-_0000_IMG_8260.jpg" alt="">
+                </a>
+            </div>
+            <div class="uk-width-1-2 uk-cover-container " style="flex-grow: 2;">
+                    <h2 class="uk-heading-divider uppercase" style="color: #51b2e5;">The nostalgic generation</h2>
+                    <p class="uk-text-lead uk-text-muted" >Trading collectible cards or liberating a new action figure from their cellophane and cardboard packages is what built the unbreakable bonds we felt with our Stretch Armstrongs and G.I. Joes.</p>
+            </div>
+
+            <div >
+                <a class="uk-inline" href="images/merch_squares-cards.jpg" data-caption="Trading cards">
+                    <img src="images/merch_squares-cards.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch_squares-cards-2.jpg" data-caption="Trading cards">
+                    <img src="images/merch_squares-cards-2.jpg" alt="">
+                </a>
+            </div>
+            <div >
+                <a class="uk-inline" href="images/merch-_0011_IMG_5304.jpg" data-caption="Snack packs">
                     <img src="images/merch-_0011_IMG_5304.jpg" alt="">
                 </a>
             </div>
             <div >
-                    <a class="uk-inline" href="images/merch-_0000_IMG_8260.jpg" data-caption="Caption 3">
-                        <img src="images/merch-_0000_IMG_8260.jpg" alt="">
-                    </a>
-                </div>
-                <div >
-                    <a class="uk-inline" href="images/merch-_0000_IMG_8261.jpg" data-caption="Caption 3">
-                        <img src="images/merch-_0000_IMG_8261.jpg" alt="">
-                    </a>
-                </div>
+                <a class="uk-inline" href="images/merch_squares-penapault.jpg" data-caption="Buildable instructions">
+                    <img src="images/merch_squares-penapault.jpg" alt="">
+                </a>
+            </div>
+            
             </div>
 
 
@@ -317,8 +449,26 @@
 
 
 
+    <!-- FOOTER -->
+<div class="footer">
+    <div class="social">
+        <a href="https://www.facebook.com" uk-icon="icon: facebook; ratio: 1;" class="uk-icon-link"></a>
+        <a href="https://www.twitter.com" uk-icon="icon: twitter; ratio: 1;" class="uk-icon-link"></a>
+        <a href="https://www.instagram.com" uk-icon="icon: instagram; ratio: 1;" class="uk-icon-link"></a>
+    </div>
+    <div class="copyright white-text">
+        &copy; 2018 9 to 5 Warriors
+    </div>
+    <div class="credits">
+        <a class="white-text" href="https://www.graywelldesign.com">Site by : Graywell Design</a>
+    </div>
 
-    <a class="uk-position-bottom-right uk-position-fixed uk-margin uk-margin-right" href="" uk-totop uk-scroll></a>
+</div>
+
+
+
+
+
 
 
 
@@ -327,11 +477,11 @@
     =================================== -->
     <script type="text/javaScript">
         jwplayer("header-video").setup({
-            "file": "http://content.jwplatform.com/videos/Aot8VrRv-5Y6d10o2.mp4",
-            "image": "http://content.jwplatform.com/thumbs/Aot8VrRv-720.jpg",
-            "autostart": false,
+            "file": "http://content.jwplatform.com/videos/zBE2gL4O-5Y6d10o2.mp4",
+            "image": "http://content.jwplatform.com/thumbs/zBE2gL4O-720.jpg",
+            "autostart": true,
             "stretching": "fill",
-            "controls": false,
+            "controls": true,
             'mute': true,
         });
 
@@ -347,6 +497,35 @@
             // Show a "Play" button so that user can start playback.
         });
         }
+
+        function muteToggle(){
+            if(jwplayer('header-video').getMute() === true){
+                jwplayer('header-video').setMute(false);
+                document.getElementById('mute').classList.remove('fa-volume-mute');
+                document.getElementById('mute').classList.add('fa-volume-up');
+            } else {
+                jwplayer('header-video').setMute(true);
+                document.getElementById('mute').classList.remove('fa-volume-up');
+                document.getElementById('mute').classList.add('fa-volume-mute');
+
+            }
+        }
+        
+        function playToggle(){
+            if(jwplayer('header-video').getState() === 'playing'){
+                jwplayer('header-video').pause();
+                document.getElementById('play').classList.remove('fa-pause');
+                document.getElementById('play').classList.add('fa-play');
+            } else {
+                jwplayer('header-video').play();
+                document.getElementById('play').classList.remove('fa-play');
+                document.getElementById('play').classList.add('fa-pause');
+
+            }
+        }
+
+
+
 
     </script>
 
