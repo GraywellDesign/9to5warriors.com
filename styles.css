@@ -84,7 +84,12 @@ html{
 .padding-left{
     padding-left: 50px;
 }
-
+.block{
+    display: block!important;
+}
+.clear{
+    clear: both;
+}
 /************************** FOOTER ****************************/
 .footer{
     width: 100%;
@@ -171,6 +176,10 @@ html{
     background-size: cover;
 }
 /******************** NAVIGATION ********************/
+.mobile-nav{
+    display: none;
+}
+
 .uk-offcanvas-bar a{
     font-size: 2em;
 }
@@ -256,6 +265,30 @@ html{
     .mobile-characters{
         display: none;
     }
+
+
+
+     .uk-slidenav, .uk-slidenav:hover, .uk-light .uk-slidenav:focus, .uk-light .uk-slidenav:hover{
+         color: #ffffff!important;
+     }
+     .uk-slidenav{
+         width: 15px!important;
+         height: 14px!important;
+         margin:  10px!important;
+         padding: 10px!important;
+     }
+     .mobile-nav-logo{
+         max-width: 100px;
+         margin: auto;
+     }
+    
+     .mobile-nav-toggle{
+         color: #ffffff;
+         width: 45%;
+         padding-right: 5%;
+         text-align: right;
+         display: none;
+     }
     /** Footer **/
 
     /************************************************
@@ -291,6 +324,16 @@ html{
   and (max-width: 736px) 
   and (orientation: portrait)
    { 
+    .logo{
+        max-width: 50%;
+
+    }   
+    .mobile-nav-toggle{
+        display: block;
+    }
+    .uk-sticky-fixed .mobile-nav-toggle .uk-icon{
+       
+    }
     #header-video{
         padding-top: 60vh;
     }
@@ -426,6 +469,13 @@ html{
   /*and (min-width: 375px) */
   and (max-width: 812px) 
   and (orientation: portrait) { 
+      .mobile-nav{
+          display: inline;
+
+      }
+      .desktop-nav{
+          display: none;
+      }
     #header-video{
         padding-top: 68vh;
     }
@@ -441,7 +491,8 @@ html{
     .desktop-characters{
         display: none;
     }
-
+    .uk-sticky-fixed .mobile-nav-toggle .uk-icon svg{
+    }
 
 
 

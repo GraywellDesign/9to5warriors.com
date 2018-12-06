@@ -41,21 +41,46 @@
         </div>
         <!-- <div class="white-overlay uk-overlay-default uk-position-cover"></div> -->
 
-        <!-- navbar -->
-        <div class="navbar uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <!-- desktop navbar -->
+        <div class="navbar uk-navbar-container uk-navbar-transparent desktop-nav" uk-navbar>
             <div class="uk-navbar-left  margin-auto">
-                <div class="uk-navbar-item"><a href="" class="uk-navbar-item uk-logo uk-flex-center"><img src="images/9to5warriors_logo.png" /></a></div>
-                <div class="uk-navbar-nav ">
-                    <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#concept" class="nav-link">Concpet</a></div>
+                <div class="uk-navbar-item logo"><a href="" class="uk-navbar-item uk-logo uk-flex-center"><img src="images/9to5warriors_logo.png" /></a></div>
+                <div class="uk-navbar-nav">
+                    <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#concept" class="nav-link">Concept</a></div>
                     <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#story" class="nav-link">Story</a></div>
                     <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#characters" class="nav-link">Characters</a></div>
                     <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#content" class="nav-link">Content</a></div>
                     <div class="uk-navbar-item"><a uk-scroll="duration: 300" href="#merch" class="nav-link">Merchandise</a></div>
                     <div class="uk-navbar-item"><a href="mailto:brandon@9to5warriors.com" class="uk-icon-link email-link" uk-icon="icon:mail; ratio:2;" ></a></div>
                 </div>
+                
             </div><!-- /navbar-left -->
         </div><!-- /navbar-->
-
+        <!-- Mobile Off-Canvas Navigation -->
+        <div class="mobile-nav" >
+            <div class="uk-navbar-item uk-position-top-left logo"><a href="" class="uk-navbar-item uk-logo"><img src="images/9to5warriors_logo.png" /></a></div>
+            <div class="mobile-nav-toggle uk-position-top-right uk-margin-top" >
+                    <div uk-toggle="target: #offcanvas-nav" ><i uk-icon="icon: menu; ratio: 2;"></i></div>
+            </div>
+            <div class="clear"></div>
+            <div id="offcanvas-nav" uk-offcanvas="overlay: true" >
+                <div class="uk-offcanvas-bar">
+                    <button class="uk-offcanvas-close uk-close-large" type="button" uk-close></button>
+                    <ul class="uk-nav uk-nav-default">
+                        <img src="images/9to5warriors_logo.png" class="mobile-nav-logo" />
+                        <li class="uk-nav-header">Navigation</li>
+                        <li><a uk-scroll href="#concept"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Concept</a></li>
+                        <li><a uk-scroll  href="#story"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Story</a></li>
+                        <li><a uk-scroll href="#characters"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Characters</a></li>
+                        <li><a uk-scroll href="#content"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Content</a></li>
+                        <li><a uk-scroll href="#merch"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Merch</a></li>
+                        <li><a uk-scroll href="mailto:brandon@9to5warriors.com"><span class="uk-margin-small-right uk-icon-link email-link" uk-icon="icon:mail"></span> Contact</a></li>
+                    </ul>
+            
+                </div>
+            </div><!-- / mobile off-canvas nav -->
+        </div><!-- / end of mobile navigation bar -->
+        
         
     <!-- Down link section -->
     
@@ -440,6 +465,7 @@
                         <div class="uk-card-body">
                             <h3 class="uk-card-title">Lt. Lead</h3>
                             <p class="uk-text-meta uk-text-muted">Team: Water Cooler Commandos</p>
+                            <p>“Perfect supply for any job”</p>
                         </div>
                     </div>
                 </li>
@@ -732,6 +758,8 @@
             var h = window.innerHeight;
             JQuery('.header-section').height(h);
             JQuery('.jwplayer').height(h);
+            JQuery('.uk-slidenav').width(10);
+            JQuery('.uk-slidenav').height(10);
         }
         JQuery(window).load(function () {
             resizeHeader();
