@@ -210,6 +210,8 @@ html{
     /** Background Image **/
     #header-video{
         min-width: 100%;
+        min-height: calc(100vh - 50px);
+
     }
 
 
@@ -259,9 +261,9 @@ html{
     /************************************************
    MEDIA QUERY - IPAD
     ************************************************/
-    @media only screen 
-    and (min-device-width: 768px) 
-    and (max-device-width: 1024px) 
+    @media all 
+    and (min-width: 768px) 
+    and (max-width: 1024px) 
     /*and (-webkit-min-device-pixel-ratio: 1)*/ {
     #header-video{
         min-width: 100%;
@@ -284,9 +286,9 @@ html{
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 736px) 
+@media all 
+  and (min-width: 320px) 
+  and (max-width: 736px) 
   and (orientation: portrait)
    { 
     #header-video{
@@ -337,9 +339,9 @@ html{
 
 /************** Iphone plus landscape ***************/
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
+@media all 
+  /*and (min-width: 414px) */
+  and (max-width: 736px) 
   and (orientation: landscape) { 
     .nav-link{
         font-size: .8em;
@@ -362,9 +364,9 @@ html{
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
+@media all 
+  /*and (min-width: 375px) */
+  and (max-width: 667px) 
   {
       
     .padding-right, .padding-left{
@@ -381,9 +383,9 @@ html{
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
+@media all 
+  and (min-width: 375px) 
+  and (max-width: 667px) 
   and (orientation: portrait) { 
     .padding-right, .padding-left{
         padding-right: unset;
@@ -399,9 +401,9 @@ html{
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
+@media all 
+  and (min-width: 375px) 
+  and (max-width: 667px) 
   and (orientation: landscape) { 
     .padding-right, .padding-left{
         padding-right: unset;
@@ -420,9 +422,9 @@ html{
 /* ----------- iPhone X ----------- */
 
 /* iPhone X Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
+@media all 
+  /*and (min-width: 375px) */
+  and (max-width: 812px) 
   and (orientation: portrait) { 
     #header-video{
         padding-top: 68vh;
@@ -445,9 +447,9 @@ html{
 
 }
 /* Iphone X Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
+@media all 
+ /* and (min-width: 375px) */
+  and (max-width: 812px) 
   and (orientation: landscape) { 
     #header-video{
         padding-top: 0vh;
@@ -467,9 +469,9 @@ html{
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
+@media all 
+  /*and (min-width: 320px) */
+  and (max-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .nav-link{
         display: none;
@@ -478,17 +480,17 @@ html{
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
+@media all 
+  /*and (min-width: 320px) */
+  and (max-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
+@media all 
+  /*and (min-width: 320px) */
+  and (max-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
