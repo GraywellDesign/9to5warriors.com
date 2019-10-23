@@ -19,6 +19,9 @@
 
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
+<!-- include JQuery -->
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
 <!-- fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -28,16 +31,19 @@
 <div class="header-section uk-cover-container" uk-height-viewport="offset-bottom: 50px" >
     <!-- video controls -->
     <div class="video-controls uk-position-bottom-left">
-        <i id="play" class="fas fa-pause video-button" onclick="playToggle()" ></i>
-        <i id="mute" class="fas fa-volume-mute video-button" onclick="muteToggle()" ></i>
+        <i id="play" class="fas fa-pause video-button" onclick="playToggle()"></i>
+        <i id="mute" class="fas fa-volume-mute video-button" ></i>
     </div>
 
 
 
     <!-- Desktop Header-->
         <!-- background video -->
-        <div class="jw-header-video">
-            <div id="header-video"></div>
+        <div class="jw-header-video uk-cover-container">
+                <video autoplay muted uk-cover id="bg-video">
+                        <source src="videos/9TO5_REDIT_HQ.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                      </video>    
         </div>
         <!-- <div class="white-overlay uk-overlay-default uk-position-cover"></div> -->
 
@@ -707,42 +713,52 @@
         FOOTER SCRIPTS
     ------------------------------------------------------------------->
     <script type="text/javaScript">
-        jwplayer("header-video").setup({
-            "file": "https://content.jwplatform.com/videos/zBE2gL4O-5Y6d10o2.mp4",
-            "image": "https://content.jwplatform.com/thumbs/zBE2gL4O-720.jpg",
-            "autostart": true,
-            "stretching": "fill",
-            "controls": true,
-            'mute': true,
-        });
-
-        var promise = document.querySelector('header-video').play();
-
-        if (promise !== undefined) {
-        promise.then(_ => {
-            // Autoplay started!
-            jwplayer("header-video").play();
-
-        }).catch(error => {
-            // Autoplay was prevented.
-            // Show a "Play" button so that user can start playback.
-        });
+        
+        var bgVid = document.getElementById("bg-video");
+        //$("#mute").click(function () {
+         //   $('#bg-video').prop("muted", !$('#bg-video').prop("muted"));
+        //});
+        function playToggle() {
+            
+            if(bgVid.paused == true){
+                bgVid.play();
+            }
+            else {
+                bgVid.pause();
+            }
         }
-
-        function muteToggle(){
-            if(jwplayer('header-video').getMute() === true){
-                jwplayer('header-video').setMute(false);
+        $("#mute").click( function (){
+            if( $("#bg-video").prop('muted') ) {
+                $("#bg-video").prop('muted', false);
                 document.getElementById('mute').classList.remove('fa-volume-mute');
                 document.getElementById('mute').classList.add('fa-volume-up');
             } else {
-                jwplayer('header-video').setMute(true);
+            $("#bg-video").prop('muted', true);
+            document.getElementById('mute').classList.remove('fa-volume-up');
+                document.getElementById('mute').classList.add('fa-volume-mute');
+            }
+        });
+        
+        
+        /*function muteToggle(){
+            var muted = bgVid.muted;
+            if(bgVid.muted = true){
+                
+                bgVid.muted = false;
+                document.getElementById('mute').classList.remove('fa-volume-mute');
+                document.getElementById('mute').classList.add('fa-volume-up');
+            } 
+            if(bgVid.muted = false){
+                
+                bgVid.muted = true;
                 document.getElementById('mute').classList.remove('fa-volume-up');
                 document.getElementById('mute').classList.add('fa-volume-mute');
-
             }
-        }
+            var muted = bgVid.muted;
+            
+        }*/
         
-        function playToggle(){
+        /*function playToggle(){
             if(jwplayer('header-video').getState() === 'playing'){
                 jwplayer('header-video').pause();
                 document.getElementById('play').classList.remove('fa-pause');
@@ -753,18 +769,18 @@
                 document.getElementById('play').classList.add('fa-pause');
 
             }
-        }
+        }*/
         function resizeHeader(){
             var h = window.innerHeight;
-            JQuery('.header-section').height(h);
-            JQuery('.jwplayer').height(h);
-            JQuery('.uk-slidenav').width(10);
-            JQuery('.uk-slidenav').height(10);
+            $('.header-section').height(h);
+            $('.jwplayer').height(h);
+            $('.uk-slidenav').width(10);
+            $('.uk-slidenav').height(10);
         }
-        JQuery(window).load(function () {
+        $(window).load(function () {
             resizeHeader();
         });
-        JQuery(window).resize(function () {
+        $(window).resize(function () {
             resizeHeader();
         });
 

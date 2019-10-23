@@ -175,6 +175,10 @@ html{
     background-position: center center;
     background-size: cover;
 }
+.jw-header-video video{
+    z-index: 1;
+    
+}
 /******************** NAVIGATION ********************/
 .mobile-nav{
     display: none;
