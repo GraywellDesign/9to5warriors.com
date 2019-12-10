@@ -15,12 +15,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit-icons.min.js"></script>
 <!-- Include JWPlayer library -->
-<script src="//content.jwplatform.com/libraries/QxqmOwOY.js"> </script>
+<script src="https://cdn.jwplayer.com/libraries/TaYCIAof.js"> </script>
 
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-
-<!-- include JQuery -->
-<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 
 <!-- fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -31,19 +28,16 @@
 <div class="header-section uk-cover-container" uk-height-viewport="offset-bottom: 50px" >
     <!-- video controls -->
     <div class="video-controls uk-position-bottom-left">
-        <i id="play" class="fas fa-pause video-button" onclick="playToggle()"></i>
-        <i id="mute" class="fas fa-volume-mute video-button" ></i>
+        <i id="play" class="fas fa-pause video-button" onclick="playToggle()" ></i>
+        <i id="mute" class="fas fa-volume-mute video-button" onclick="muteToggle()" ></i>
     </div>
 
 
 
     <!-- Desktop Header-->
         <!-- background video -->
-        <div class="jw-header-video uk-cover-container">
-                <video autoplay muted uk-cover id="bg-video">
-                        <source src="videos/9TO5_REDIT_HQ.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                      </video>    
+        <div class="jw-header-video">
+            <div id="header-video"></div>
         </div>
         <!-- <div class="white-overlay uk-overlay-default uk-position-cover"></div> -->
 
@@ -177,7 +171,7 @@
         <!-- conainer for all comic items -->
         <div class="uk-card uk-card-default">
             <div class="uk-card-media-top">
-                    <script src="https://content.jwplatform.com/players/iO81Ye0b-QxqmOwOY.js"></script>
+                <script src="https://cdn.jwplayer.com/players/iO81Ye0b-QxqmOwOY.js"></script>
             </div>
             <div class="uk-card-body">
                 <p>Sometimes extraordinary things happen to extra-ordinary people. Ask Alan McMillan. His life used to be pretty routine – punch into work, make a few sales calls, daydream about the cute receptionist, you know? Normal. Sure, his habit of making action figures out of leftover lunches and office supplies might be a little off-putting to some, but no one really hung out in his cubicle long enough to notice. Alan preferred it this way and kept his favorite figures hidden in a desk drawer waging an imaginary war between food and office supply soldiers. That is, until a freak accident involving his favorite Japanese energy drink and a surge protector sparked them to life. Now, Alan is caught between a very real battle for total office domination - one that threatens to drag him out of the comfortable confines of his vivid imagination and into a reality where paper balls, rubber bands and thumb tacks are threatening his way of life.</p>
@@ -713,52 +707,42 @@
         FOOTER SCRIPTS
     ------------------------------------------------------------------->
     <script type="text/javaScript">
-        
-        var bgVid = document.getElementById("bg-video");
-        //$("#mute").click(function () {
-         //   $('#bg-video').prop("muted", !$('#bg-video').prop("muted"));
-        //});
-        function playToggle() {
-            
-            if(bgVid.paused == true){
-                bgVid.play();
-            }
-            else {
-                bgVid.pause();
-            }
+        jwplayer("header-video").setup({
+            "file": "https://content.jwplatform.com/videos/e9TyN7PZ-ISeBJPbq.mp4",
+            "image": "https://content.jwplatform.com/thumbs/e9TyN7PZ-720.jpg",
+            "autostart": true,
+            "stretching": "fill",
+            "controls": true,
+            'mute': true,
+        });
+
+        var promise = document.querySelector('header-video').play();
+
+        if (promise !== undefined) {
+        promise.then(_ => {
+            // Autoplay started!
+            jwplayer("header-video").play();
+
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so that user can start playback.
+        });
         }
-        $("#mute").click( function (){
-            if( $("#bg-video").prop('muted') ) {
-                $("#bg-video").prop('muted', false);
+
+        function muteToggle(){
+            if(jwplayer('header-video').getMute() === true){
+                jwplayer('header-video').setMute(false);
                 document.getElementById('mute').classList.remove('fa-volume-mute');
                 document.getElementById('mute').classList.add('fa-volume-up');
             } else {
-            $("#bg-video").prop('muted', true);
-            document.getElementById('mute').classList.remove('fa-volume-up');
-                document.getElementById('mute').classList.add('fa-volume-mute');
-            }
-        });
-        
-        
-        /*function muteToggle(){
-            var muted = bgVid.muted;
-            if(bgVid.muted = true){
-                
-                bgVid.muted = false;
-                document.getElementById('mute').classList.remove('fa-volume-mute');
-                document.getElementById('mute').classList.add('fa-volume-up');
-            } 
-            if(bgVid.muted = false){
-                
-                bgVid.muted = true;
+                jwplayer('header-video').setMute(true);
                 document.getElementById('mute').classList.remove('fa-volume-up');
                 document.getElementById('mute').classList.add('fa-volume-mute');
+
             }
-            var muted = bgVid.muted;
-            
-        }*/
+        }
         
-        /*function playToggle(){
+        function playToggle(){
             if(jwplayer('header-video').getState() === 'playing'){
                 jwplayer('header-video').pause();
                 document.getElementById('play').classList.remove('fa-pause');
@@ -769,18 +753,18 @@
                 document.getElementById('play').classList.add('fa-pause');
 
             }
-        }*/
+        }
         function resizeHeader(){
             var h = window.innerHeight;
-            $('.header-section').height(h);
-            $('.jwplayer').height(h);
-            $('.uk-slidenav').width(10);
-            $('.uk-slidenav').height(10);
+            JQuery('.header-section').height(h);
+            JQuery('.jwplayer').height(h);
+            JQuery('.uk-slidenav').width(10);
+            JQuery('.uk-slidenav').height(10);
         }
-        $(window).load(function () {
+        JQuery(window).load(function () {
             resizeHeader();
         });
-        $(window).resize(function () {
+        JQuery(window).resize(function () {
             resizeHeader();
         });
 
@@ -792,3 +776,4 @@
 
 </body>
 </html>
+
