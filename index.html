@@ -10,12 +10,12 @@
 <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/css/uikit.min.css" />
 <link rel="stylesheet" href="styles.css" />
+<script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
 
 <!-- UIkit JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit-icons.min.js"></script>
 <!-- Include JWPlayer library -->
-<script src="https://cdn.jwplayer.com/libraries/QxqmOwOY.js"> </script>
 
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
@@ -28,16 +28,18 @@
 <div class="header-section uk-cover-container" uk-height-viewport="offset-bottom: 50px" >
     <!-- video controls -->
     <div class="video-controls uk-position-bottom-left">
-        <i id="play" class="fas fa-pause video-button" onclick="playToggle()" ></i>
-        <i id="mute" class="fas fa-volume-mute video-button" onclick="muteToggle()" ></i>
+        <i id="play" class="fas fa-pause video-button"></i>
+        <i id="mute" class="fas fa-volume-mute video-button"></i>
     </div>
 
 
 
     <!-- Desktop Header-->
         <!-- background video -->
-        <div class="jw-header-video">
-            <div id="header-video"></div>
+        <div class="jw-header-video uk-cover-container" style="min-height:100%;">
+            <div id="header-video">
+                <video id="header-video-vid" src="https://content.jwplatform.com/videos/zBE2gL4O-5Y6d10o2.mp4" uk-cover loop muted playsinline uk-video="autoplay: inview"></video>
+            </div>
         </div>
         <!-- <div class="white-overlay uk-overlay-default uk-position-cover"></div> -->
 
@@ -172,7 +174,7 @@
         <!-- conainer for all comic items -->
         <div class="uk-card uk-card-default">
             <div class="uk-card-media-top">
-                <div style="position:relative; overflow:hidden; padding-bottom:56.25%"> <iframe src="https://cdn.jwplayer.com/players/iO81Ye0b-QxqmOwOY.html" width="100%" height="100%" frameborder="0" scrolling="auto" title="9to5pitch" style="position:absolute;" allowfullscreen></iframe> </div>
+                <div style="position:relative; overflow:hidden; padding-bottom:56.25%"><iframe src="https://cdn.jwplayer.com/players/iO81Ye0b-QxqmOwOY.html" width="100%" height="100%" frameborder="0" scrolling="auto" title="9to5pitch" style="position:absolute;" allowfullscreen></iframe> </div>
             </div>
             <div class="uk-card-body">
                 <p>Sometimes extraordinary things happen to extra-ordinary people. Ask Alan McMillan. His life used to be pretty routine – punch into work, make a few sales calls, daydream about the cute receptionist, you know? Normal. Sure, his habit of making action figures out of leftover lunches and office supplies might be a little off-putting to some, but no one really hung out in his cubicle long enough to notice. Alan preferred it this way and kept his favorite figures hidden in a desk drawer waging an imaginary war between food and office supply soldiers. That is, until a freak accident involving his favorite Japanese energy drink and a surge protector sparked them to life. Now, Alan is caught between a very real battle for total office domination - one that threatens to drag him out of the comfortable confines of his vivid imagination and into a reality where paper balls, rubber bands and thumb tacks are threatening his way of life.</p>
@@ -708,53 +710,34 @@
         FOOTER SCRIPTS
     ------------------------------------------------------------------->
     <script type="text/javaScript">
-        jwplayer("header-video").setup({
-            "file": "https://content.jwplatform.com/videos/zBE2gL4O-5Y6d10o2.mp4",
-            "image": "https://content.jwplatform.com/thumbs/zBE2gL4O-720.jpg",
-            "autostart": true,
-            "stretching": "fill",
-            "controls": true,
-            'mute': true,
-        });
 
-        var promise = document.querySelector('header-video').play();
 
-        if (promise !== undefined) {
-        promise.then(_ => {
-            // Autoplay started!
-            jwplayer("header-video").play();
+        $("#header-video-vid").prop('muted', true);
 
-        }).catch(error => {
-            // Autoplay was prevented.
-            // Show a "Play" button so that user can start playback.
-        });
-        }
-
-        function muteToggle(){
-            if(jwplayer('header-video').getMute() === true){
-                jwplayer('header-video').setMute(false);
-                document.getElementById('mute').classList.remove('fa-volume-mute');
-                document.getElementById('mute').classList.add('fa-volume-up');
+        $("#mute").click( function (){
+            if( $("#header-video-vid").prop('muted') ) {
+                    $("#header-video-vid").prop('muted', false);
+                    $("#mute").removeClass('fa-volume-mute');
+                    $("#mute").addClass('fa-volume-up');
             } else {
-                jwplayer('header-video').setMute(true);
-                document.getElementById('mute').classList.remove('fa-volume-up');
-                document.getElementById('mute').classList.add('fa-volume-mute');
+                $("#header-video-vid").prop('muted', true);
+                $("#mute").addClass('fa-volume-mute');
+                $("#mute").removeClass('fa-volume-up');
 
             }
-        }
-        
-        function playToggle(){
-            if(jwplayer('header-video').getState() === 'playing'){
-                jwplayer('header-video').pause();
-                document.getElementById('play').classList.remove('fa-pause');
-                document.getElementById('play').classList.add('fa-play');
+        });
+        $("#play").click( function (){
+            if( $("#header-video-vid").prop('paused') ) {
+                    $("#header-video-vid").trigger('play');
+                    $("#play").removeClass('fa-play');
+                    $("#play").addClass('fa-pause');
             } else {
-                jwplayer('header-video').play();
-                document.getElementById('play').classList.remove('fa-play');
-                document.getElementById('play').classList.add('fa-pause');
+                $("#header-video-vid").trigger('pause')
+                $("#play").addClass('fa-play');
+                $("#play").removeClass('fa-pause');
 
             }
-        }
+        });
         function resizeHeader(){
             var h = window.innerHeight;
             JQuery('.header-section').height(h);
@@ -762,12 +745,7 @@
             JQuery('.uk-slidenav').width(10);
             JQuery('.uk-slidenav').height(10);
         }
-        JQuery(window).load(function () {
-            resizeHeader();
-        });
-        JQuery(window).resize(function () {
-            resizeHeader();
-        });
+        
 
 
 
